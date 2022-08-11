@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plant Mom 101</title>
+    <style>
+      body {
+        background: linear-gradient(
+          0deg,
+          rgba(251, 250, 225, 0.5) 11.2%,
+          rgba(206, 240, 185, 0.5) 47.5%,
+          rgba(44, 66, 36, 0.8) 100.2%
+        );
+        padding: none;
+      }
+
+      h1 {
+        color: #ffffff;
+        font-family: "Courier New", Courier, monospace;
+        text-align: center;
+        padding: 5px 0px 0px;
+      }
+
+      h2 {
+        color: #efefef;
+        font-family: Montserrat, Arial, Helvetica, sans-serif;
+        font-size: medium;
+        font-weight: normal;
+        text-align: center;
+      }
+
+      /* em {
+        color: #21311a;
+      }*/
+
+      hr {
+        color: #ffffff;
+        margin: 20px 10%;
+      }
+
+      img {
+        border-radius: 10px;
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+      }
+
+      p {
+        font-family: Montserrat, Arial, Helvetica, sans-serif;
+        font-size: small;
+        line-height: 1.5;
+        margin: 20px 10% 40px;
+        text-align: left;
+      }
+
+      span {
+        font-style: italic;
+      }
+
+      a {
+        color: #5f7159;
+        display: block;
+        font-size: x-small;
+        transition: all 150ms ease-in-out;
+      }
+
+      a:hover {
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      button {
+        background-color: #5f7159;
+        border: 2px solid #5f7159;
+        border-radius: 50px;
+        box-shadow: 2px 2px 3px 1px rgba(128, 128, 128, 0.3);
+        color: #ffffff;
+        display: block;
+        font-family: Montserrat, Arial, Helvetica, sans-serif;
+        font-size: x-small;
+        font-weight: bold;
+        margin: 0 auto;
+        padding: 12px 20px;
+        transition: all 200ms ease-in-out;
+      }
+
+      button:hover {
+        background-color: #ffffff;
+        color: #5f7159;
+        cursor: pointer;
+      }
+
+      .main {
+        max-width: 90%;
+        margin: 0 auto;
+      }
+
+      .footer {
+        color: #21311a;
+        font-family: "Courier New", Courier, monospace;
+        font-size: x-small;
+        margin: 30px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>
+        <strong> Plant Mom 101</strong>
+      </h1>
+
+      <h2>Choosing <em>the best</em> house plant for your home</h2>
+
+      <hr />
+
+      <img
+        src=" https://s3.amazonaws.com/shecodesio-production/uploads/files/000/037/329/original/pexels-cottonbro-4503268.jpg?1655305670"
+        alt="Person watering houseplant"
+      />
+
+      <p>
+        “If you’ve ever had an indoor plant that’s quickly withered and wilted,
+        you might believe that you don’t have a green thumb or you’re not cut
+        out for growing plants.
+
+        <span> Well, we’re here to tell you that’s not the case!</span>
+
+        <br />
+        <br />
+
+        The truth is that anyone can be a good plant owner, and it really isn’t
+        complicated, we promise. In this article, we’ll walk you through
+        everything you need to know to care for your indoor plants, from
+        watering to sunlight requirements to fertilizer.”
+
+        <a
+          href="https://mycityplants.com/blogs/plant-journal/how-to-choose-the-best-plants-for-your-home"
+          target="_blank"
+        >
+          <br />
+
+          <strong
+            >Read more on things to consider before buying a house
+            plant.</strong
+          ></a
+        >
+      </p>
+
+      <button>Shop Now</button>
+
+      <p class="footer">Coded by Adele_D ©2022</p>
+    </div>
+
+    <script>
+      function shopNow() {
+        let name = prompt("What is your name?");
+        let locationName = prompt("What continent do you live in?");
+        let email = prompt("What your email address?");
+
+        if (locationName === "Europe" || locationName === "Africa") {
+          alert("Happy Shopping! 🌿");
+          let h1 = document.querySelector("h1");
+          h1.innerHTML = "Welcome to our shop " + name + " 🌿😊";
+        } else {
+          alert(
+            "Sorry! We do not deliver to your location yet. We will email you with any shop updates 🌵"
+          );
+          let h1 = document.querySelector("h1");
+          h1.innerHTML = h1.innerHTML =
+            "Sorry " + name + "!" + " Try again later 🌵🌻";
+        }
+      }
+
+      let shopButton = document.querySelector("button");
+
+      shopButton.addEventListener("click", shopNow);
+    </script>
+  </body>
+</html>
